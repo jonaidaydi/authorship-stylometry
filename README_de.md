@@ -1,4 +1,4 @@
-# Untersuchung von Autorschaft mit PCA und hierarchischer Clusteranalyse
+# Automatische Autorschaftserkennung journalistischer Texte mittels stylometrischer Merkmale und klassischer Machine-Learning-Verfahren
 
 **Deutsch** | [English](README.md)
 
