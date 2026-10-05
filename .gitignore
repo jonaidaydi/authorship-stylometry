@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.DS_Store
+Thumbs.db
+
+# Downloaded corpus files
+federalist.txt
+federalist_papers/
+reuter+50+50/
+reuter+50+50.zip
+
+# Generated figures
+hca_dendrogram.png
+hka_pca_biplot.png
