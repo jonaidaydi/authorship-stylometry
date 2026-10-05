@@ -1,4 +1,4 @@
-# Authorship exploration with PCA and hierarchical clustering
+# Automatic Authorship Attribution of Journalistic Texts Using Stylometric Features and Classical Machine Learning Methods
 
 [Deutsch](README_de.md) | **English**
 
