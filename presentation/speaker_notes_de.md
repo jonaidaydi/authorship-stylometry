@@ -1,6 +1,6 @@
 # Sprechernotizen zur AP-Präsentation
 
-Sprache: Deutsch. Folien 1–12 sind auf insgesamt 15 Minuten ausgelegt. Folie 13 ist ein Quellenanhang. Anschließend sind etwa 10 Minuten Diskussion vorgesehen. Die Zuordnung der Sprecher ist ein Vorschlag für die Probe.
+Sprache: Deutsch. Folien 1–12 sind auf insgesamt 15 Minuten ausgelegt. Folie 13 ist ein Quellenanhang. Anschließend sind etwa 10 Minuten Diskussion vorgesehen. Die Folien und die Zuordnung der Sprecher sind Vorschläge zur gemeinsamen Abstimmung. Kais ursprüngliche Notebooks bleiben unverändert.
 
 ## Folie 1: Autorschaftserkennung mit Stylometrie
 
@@ -84,9 +84,9 @@ Quellen: results/qualitative_cases.json und results/README.md
 
 ## Folie 11: Python-Umsetzung und Reproduktion
 
-**Kai S. Kurono · 1:10**
+**Jonaid Aydi · 1:10**
 
-Die Umsetzung bleibt bewusst überschaubar. prepare_data lädt und filtert den Korpus. run_analysis führt den vollständigen Reuters-Vergleich aus. Kleine Module trennen das Laden der Texte, die Merkmalsextraktion und die Distanzberechnung. CSV-Dateien enthalten die Merkmale und Vorhersagen. JSON-Dateien dokumentieren Parameter, Versionen und Hashes. Damit lassen sich Bericht und Berechnung zusammen prüfen. Der Kursbezug liegt unter anderem in Funktionen mit Docstrings, Dictionaries, virtuellen Umgebungen, NLTK, spaCy, pandas und NumPy. Die neue Installation reproduziert die früheren Vorhersagen vollständig. Fünf gezielte Funktionstests und alle drei Notebooks laufen durch. Die Federalist-Beispiele nutzen jetzt denselben bereinigten Textbestand. Ihre Kategorien unterscheiden eindeutige, umstrittene und gemeinsame Autorschaft. Sie dienen als historisches Zusatzbeispiel.
+Die Umsetzung bleibt bewusst überschaubar. prepare_data lädt und filtert den Korpus. run_analysis führt den vollständigen Reuters-Vergleich aus. Kleine Module trennen das Laden der Texte, die Merkmalsextraktion und die Distanzberechnung. CSV-Dateien enthalten die Merkmale und Vorhersagen. JSON-Dateien dokumentieren Parameter, Versionen und Hashes. Damit lassen sich Bericht und Berechnung zusammen prüfen. Der Kursbezug liegt unter anderem in Funktionen mit Docstrings, Dictionaries, virtuellen Umgebungen, NLTK, spaCy, pandas und NumPy. Die neue Installation reproduziert die früheren Vorhersagen vollständig. Vier gezielte Funktionstests prüfen diese ergänzende Analyse. Kais drei Notebooks bleiben im ursprünglichen Stand. Jonaids Vergleich läuft unabhängig davon. Die Federalist-Beispiele gehören zu Kais historischer Exploration und gehen nicht in die ergänzende Reuters-Testauswertung ein.
 
 Quellen: README_de.md und REPRODUCIBILITY.md
 
@@ -94,7 +94,7 @@ Quellen: README_de.md und REPRODUCIBILITY.md
 
 **Jonaid Aydi und Kai S. Kurono · 1:10**
 
-Unsere Untersuchung zeigt, dass beide Repräsentationen für diese drei Reuters-Autoren nützliche Informationen enthalten. TF-IDF erzielt das beste Testergebnis. Autorenzentren verbessern den Stilansatz gegenüber einzelnen Nachbarn. Daraus folgt keine allgemeine Erkennung eines reinen persönlichen Stils. Themenunterschiede, verwandte Meldungen, redaktionelle Vorgaben und Texteigenschaften bleiben mögliche Einflüsse. Eine sinnvolle Fortsetzung wäre eine neue Autorenauswahl oder eine Auswertung mit kontrollierten Themen. Kai verantwortet die Wortrepräsentationen und die Exploration mit PCA, Clustering und Mystery-Zuordnung. Jonaid verantwortet den ergänzenden Stilvergleich, die Testauswertung und die Integration für reproduzierbare Läufe. Codex unterstützte die Integration, Prüfung und Vorbereitung der Unterlagen. Wir beide verantworten die Abgabe und ihre Erklärung. Damit öffnen wir die Diskussion.
+Unsere Untersuchung zeigt, dass beide Repräsentationen für diese drei Reuters-Autoren nützliche Informationen enthalten. TF-IDF erzielt das beste Testergebnis. Autorenzentren verbessern den Stilansatz gegenüber einzelnen Nachbarn. Daraus folgt keine allgemeine Erkennung eines reinen persönlichen Stils. Themenunterschiede, verwandte Meldungen, redaktionelle Vorgaben und Texteigenschaften bleiben mögliche Einflüsse. Eine sinnvolle Fortsetzung wäre eine neue Autorenauswahl oder eine Auswertung mit kontrollierten Themen. Kai verantwortet die Wortrepräsentationen und die Exploration mit PCA, Clustering und Mystery-Zuordnung. Jonaid verantwortet den ergänzenden Stilvergleich, die Testauswertung und die Integration für reproduzierbare Läufe. Codex unterstützte Jonaids ergänzende Analyse, ihre Prüfung und die Vorbereitung der Unterlagen. Kais ursprüngliche Notebooks bleiben unverändert. Wir beide verantworten die Abgabe und ihre Erklärung. Damit öffnen wir die Diskussion.
 
 Quellen: https://github.com/jonaidaydi/authorship-stylometry
 
@@ -144,9 +144,9 @@ Für konkrete Zentroidentscheidungen lässt sich der Beitrag jedes Merkmals zur 
 
 Der feste Vergleich untersucht die dokumentierten 26 Stilmaße. Eine weitere Merkmalsgruppe wäre ein neues Experiment und sollte nicht anhand dieses bereits betrachteten Tests optimiert werden.
 
-**Was wurde an Federalist korrigiert?**
+**Welche Teile bleiben bei Kai?**
 
-Beide Notebooks nutzen denselben Parser, getrennte Metadaten und Kategorien. Von Essay 70 bleibt die erste Fassung. Ward erhält kondensierte Distanzen.
+Kais drei ursprüngliche Notebooks bleiben unverändert. Seine Federalist-Beispiele sind eine separate Exploration. Jonaids Python-Vergleich ergänzt die Reuters-Auswertung und läuft unabhängig von diesen Notebooks.
 
 **Was muss noch persönlich erledigt werden?**
 

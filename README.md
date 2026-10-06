@@ -33,7 +33,7 @@ git clone https://github.com/jonaidaydi/authorship-stylometry.git
 cd authorship-stylometry
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe prepare_data.py --federalist
+.venv\Scripts\python.exe prepare_data.py
 .venv\Scripts\python.exe run_analysis.py
 ```
 
@@ -81,24 +81,24 @@ Vocabulary, IDF, scaling, constant-feature removal, author centroids and PCA are
 | `stylometry/corpus.py` | Document identities, split and exact-duplicate checks |
 | `stylometry/features.py` | Shared word tokenizer and 26 style measurements |
 | `stylometry/models.py` | Reference scaling and NumPy nearest-neighbour distances |
-| `stylometry/federalist.py` | Shared Federalist body extraction and separate labels |
 | [Reuters notebook](reuter%20HKA%2C%20HCA.ipynb) | TF-IDF exploration, full-space Ward HCA, PCA and three mystery predictions |
 | [Federalist PCA](HKA%20Federalist%20Papiere.ipynb) | Supplementary TF-IDF/PCA example |
 | [Federalist HCA](HCA%20Federalist%20Papiere.ipynb) | Supplementary word-frequency HCA with IDF disabled |
 
-Open notebooks with `.venv\Scripts\python.exe -m jupyterlab` and run all cells from top to bottom with a fresh kernel. Keep the notebooks in the repository root. Their outputs are cleared in Git. Generated exploration figures stay local.
+The three notebooks are Kai's original contribution from commit `64b1f8a`, preserved with their stored outputs. Open them with `.venv\Scripts\python.exe -m jupyterlab`. The Reuters notebook contains its own seaborn installation cell. Changes to these notebooks and their methodology remain with Kai.
 
-The Federalist notebooks share the same 85 cleaned essay bodies. Headings, author metadata, salutation and the PUBLIUS signature plus following endnotes are excluded. The first version of essay 70 is retained. Essay numbers come from source headings. Essays 49–58, 62 and 63 are marked `Disputed`, and 18–20 are marked `Joint`. Ward receives condensed Euclidean distances. The corrected examples replace the earlier uncleaned plots and are supplementary to Reuters.
+Jonaid's complementary Reuters analysis runs independently through `run_analysis.py`. It reproduces the word representation and document split as a comparison baseline in separate Python modules. The installation instructions, result files and checks below refer to this complementary analysis.
+
+The Federalist notebooks are supplementary historical examples. Their original preprocessing and author categories have not been harmonised. Headings and author metadata can enter their features. The HCA passes a square distance matrix to `linkage`, which treats its rows as observations. These outputs are separate from the complementary Reuters test evaluation.
 
 ## Checks
 
 ```powershell
 .venv\Scripts\python.exe -m pip check
 .venv\Scripts\python.exe -m unittest discover -s tests -v
-.venv\Scripts\python.exe verify_notebooks.py
 ```
 
-The notebook checker uses this Python environment, starts a fresh kernel for each notebook and saves executed copies under ignored `verification_outputs/`. The main analysis has been compared with the earlier local report calculation: document identities, all feature values, predictions and model metrics agree.
+The four tests check Jonaid's complementary analysis. The main analysis has been compared with the earlier local report calculation: document identities, all feature values, predictions and model metrics agree.
 
 ## Interpretation and limitations
 
@@ -111,7 +111,7 @@ Topics, editorial conventions and related news stories may contribute to the sco
 | Kai S. Kurono | Reuters and Federalist exploration notebooks, word representations, PCA, hierarchical clustering and Reuters mystery attribution. |
 | Jonaid Aydi | Complementary style-feature comparison, official test evaluation, repository integration, reproducibility and bilingual documentation. |
 
-Codex assisted with code integration, error diagnosis, verification and preparation of the reports and presentation. The repository records the implemented methods and reproducible outputs. The two contributors remain responsible for the submitted work and its explanation.
+Codex assisted with Jonaid's complementary analysis, its integration and verification, and preparation of the supporting materials. Kai's three original notebooks remain unchanged. The joint report and slides are proposals for both contributors to review together. The repository records the implemented methods and reproducible outputs. The two contributors remain responsible for the submitted work and its explanation.
 
 ## Sources
 

@@ -33,7 +33,7 @@ git clone https://github.com/jonaidaydi/authorship-stylometry.git
 cd authorship-stylometry
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe prepare_data.py --federalist
+.venv\Scripts\python.exe prepare_data.py
 .venv\Scripts\python.exe run_analysis.py
 ```
 
@@ -81,24 +81,24 @@ Vokabular, IDF, Standardisierung, Konstantenfilter, Autorenzentren und PCA werde
 | `stylometry/corpus.py` | Dokumentidentitäten, Aufteilung und Prüfung exakter Duplikate |
 | `stylometry/features.py` | Gemeinsame Worttokenisierung und 26 Stilmaße |
 | `stylometry/models.py` | Standardisierung anhand der Referenz und NumPy-Distanzen |
-| `stylometry/federalist.py` | Gemeinsame Extraktion der Federalist-Textkörper und getrennte Labels |
 | [Reuters-Notebook](reuter%20HKA%2C%20HCA.ipynb) | TF-IDF-Exploration, Ward-HCA im vollständigen Raum, PCA und drei Mystery-Zuordnungen |
 | [Federalist-PCA](HKA%20Federalist%20Papiere.ipynb) | Ergänzendes Beispiel mit TF-IDF und PCA |
 | [Federalist-HCA](HCA%20Federalist%20Papiere.ipynb) | Ergänzendes Beispiel mit Worthäufigkeiten und deaktivierter IDF |
 
-Notebooks mit `.venv\Scripts\python.exe -m jupyterlab` öffnen und alle Zellen mit frischem Kernel der Reihe nach ausführen. Sie bleiben im Hauptordner des Repositorys. Ihre Ausgaben sind in Git geleert. Erzeugte Explorationsgrafiken bleiben lokal.
+Die drei Notebooks sind Kais Originalbeitrag aus Commit `64b1f8a` und bleiben einschließlich ihrer gespeicherten Ausgaben unverändert. Sie lassen sich mit `.venv\Scripts\python.exe -m jupyterlab` öffnen. Das Reuters-Notebook enthält seine eigene Installationszelle für seaborn. Änderungen an den Notebooks und ihrer Methodik bleiben bei Kai.
 
-Die Federalist-Notebooks verwenden dieselben 85 bereinigten Aufsätze. Überschriften, Autorenangaben, Publikationsdaten, Anrede und PUBLIUS-Signatur samt nachfolgenden Endnoten sind ausgeschlossen. Die erste Fassung von Aufsatz 70 bleibt erhalten. Die Nummern stammen aus den Quellüberschriften. Aufsätze 49–58, 62 und 63 tragen das Label `Disputed`, 18–20 das Label `Joint`. Ward erhält kondensierte euklidische Distanzen. Die korrigierten Beispiele ersetzen die früheren unbereinigten Darstellungen und ergänzen Reuters.
+Jonaids ergänzende Reuters-Analyse läuft unabhängig davon über `run_analysis.py`. Sie übernimmt die Wortrepräsentation und Dokumentaufteilung als Vergleichsbasis in eigenen Python-Modulen. Die Installationsanleitung, Ergebnisdateien und nachfolgenden Prüfungen beziehen sich auf diese Ergänzung.
+
+Die Federalist-Notebooks sind historische Zusatzbeispiele. Ihre ursprüngliche Textaufbereitung und Autorenkategorien wurden nicht vereinheitlicht. Überschriften und Autorenangaben können in die Merkmale eingehen. Die HCA übergibt eine quadratische Distanzmatrix an `linkage`, deren Zeilen dort als Beobachtungen behandelt werden. Ihre Ergebnisse gehören nicht zur ergänzenden Reuters-Testauswertung.
 
 ## Prüfungen
 
 ```powershell
 .venv\Scripts\python.exe -m pip check
 .venv\Scripts\python.exe -m unittest discover -s tests -v
-.venv\Scripts\python.exe verify_notebooks.py
 ```
 
-Die Notebookprüfung verwendet diese Python-Umgebung, startet für jedes Notebook einen frischen Kernel und speichert ausgeführte Kopien im ignorierten Ordner `verification_outputs/`. Der Hauptlauf wurde mit der früheren lokalen Reportanalyse verglichen. Dokumentidentitäten, sämtliche Stilmerkmale, Vorhersagen und Modellkennzahlen stimmen überein.
+Die vier Tests prüfen Jonaids ergänzende Analyse. Der Hauptlauf wurde mit der früheren lokalen Reportanalyse verglichen. Dokumentidentitäten, sämtliche Stilmerkmale, Vorhersagen und Modellkennzahlen stimmen überein.
 
 ## Interpretation und Grenzen
 
@@ -111,7 +111,7 @@ Themen, redaktionelle Vorgaben und verwandte Nachrichten können die Trefferquot
 | Kai S. Kurono | Reuters- und Federalist-Exploration, Wortrepräsentationen, PCA, hierarchische Clusteranalyse und Reuters-Mystery-Zuordnung. |
 | Jonaid Aydi | Ergänzender Stilmerkmalsvergleich, Auswertung des offiziellen Testsplits, Repositoryintegration, Reproduzierbarkeit und zweisprachige Dokumentation. |
 
-Codex unterstützte die Codeintegration, Fehlerdiagnose, Prüfung sowie die Vorbereitung der Berichte und Präsentation. Das Repository dokumentiert die implementierten Methoden und reproduzierbaren Ergebnisse. Die beiden Mitwirkenden verantworten die eingereichte Arbeit und ihre Erklärung.
+Codex unterstützte Jonaids ergänzende Analyse, ihre Integration und Prüfung sowie die Vorbereitung der Unterlagen. Kais drei Originalnotebooks bleiben unverändert. Gemeinsamer Bericht und Folien sind Vorschläge zur Abstimmung beider Mitwirkenden. Das Repository dokumentiert die implementierten Methoden und reproduzierbaren Ergebnisse. Die beiden Mitwirkenden verantworten die eingereichte Arbeit und ihre Erklärung.
 
 ## Quellen
 

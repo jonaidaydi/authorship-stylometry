@@ -6,7 +6,6 @@ import numpy as np
 import spacy
 
 from stylometry.features import clean_text, extract_document_features
-from stylometry.federalist import parse_federalist, roman_number
 from stylometry.models import fit_scaler, nearest, transform_style
 
 
@@ -36,24 +35,6 @@ class MethodTests(unittest.TestCase):
 
     def test_minimal_cleaning(self):
         self.assertEqual(clean_text(" A &amp; B!\r\n "), "A & B!")
-
-    def test_federalist_metadata_and_duplicate(self):
-        blocks = []
-        for number in range(1, 86):
-            block = f"THE FEDERALIST.\nNo. {number}.\nTitle\nHAMILTON\nTo the People of the State of New York:\n" + "Essay body with enough words. " * 10 + "\nPUBLIUS.\nEditorial note.\n"
-            blocks.append(block)
-            if number == 70:
-                blocks.append(block.replace("Essay body", "Alternative body"))
-        records = parse_federalist("\n".join(blocks))
-        self.assertEqual(len(records), 85)
-        self.assertEqual(records[69]["number"], 70)
-        self.assertTrue(records[69]["body"].startswith("Essay body"))
-        self.assertNotIn("HAMILTON", records[0]["body"])
-        self.assertNotIn("Editorial", records[0]["body"])
-        self.assertEqual(records[48]["author"], "Disputed")
-        self.assertEqual(records[17]["author"], "Joint")
-        self.assertEqual(roman_number("LIX"), 59)
-
 
 if __name__ == "__main__":
     unittest.main()

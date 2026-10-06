@@ -12,8 +12,8 @@ The pinned direct versions are NumPy 2.4.4, pandas 3.0.2, SciPy 1.18.1, scikit-l
 - Reuters download from the documented UCI URL and selection of the 300 required articles.
 - Complete `run_analysis.py` execution using only this repository, its new environment and prepared corpus.
 - Comparison with the preceding local calculation: `document_manifest.csv`, `style_features.csv`, `predictions.csv` and `model_comparison.csv` match, including all individual predictions.
-- Five semantic tests covering word/sentence counts, empty documents, reference-only scaling, nearest-neighbour ties, minimal cleaning and Federalist parsing.
-- All three notebooks executed from top to bottom in fresh kernels. The checked copies remain local under `verification_outputs/`.
+- Four semantic tests covering word/sentence counts, empty documents, reference-only scaling, nearest-neighbour ties and minimal cleaning.
+- The three original notebooks are preserved byte for byte from commit `64b1f8a`. Their execution is outside this verification of the complementary Reuters analysis.
 
 These checks verify the implementation for the supplied data and fixed settings. They do not establish generalisation to other authors or topic-independent attribution.
 
@@ -39,13 +39,11 @@ The local `.cache/data_sources.json` records download URLs and archive hashes. N
 
 scikit-learn warns that the English stop-word list is not fully aligned with the Snowball tokenizer. This warning is expected and does not stop execution. Changing the stop-word handling would change the word representation. It was therefore preserved for the matched comparison and documented in the reports.
 
-## Federalist corrections
+## Scope and original notebooks
 
-The shared parser identifies 86 source sections, keeps the first version of essay 70 and returns essays 1–85 by their heading numbers. It removes title, publication and author metadata, the salutation and the shared signature plus following endnotes. Unexpected numbering or missing body delimiters raises an error instead of silently assigning positional numbers.
+This verification covers Jonaid Aydi's independent Reuters comparison in `run_analysis.py` and its supporting modules. It does not certify the execution or methodology of Kai S. Kurono's original notebooks. Those files have been restored to commit `64b1f8a`, including their outputs. The complementary analysis does not import or execute them.
 
-Both notebooks use the same categories: 51 Hamilton, 14 Madison, 5 Jay, 12 disputed and 3 jointly authored essays. The disputed set is 49–58, 62 and 63. Joint essays are 18–20. These are descriptive plotting categories, not gold predictions from a trained Federalist classifier.
-
-The HCA retains the original `use_idf=False` representation and passes condensed Euclidean distances to Ward. The PCA retains TF-IDF with `use_idf=True`. These are distinct representations. Corrected figures must not be compared numerically with the earlier uncleaned versions as if preprocessing were unchanged.
+The original Federalist notebooks retain their own preprocessing, essay-number handling and author categories. Their metadata filtering and the square-distance input in the HCA remain matters for Kai to review. No corrected Federalist parser or replacement figures form part of the complementary contribution.
 
 ## Course connection
 

@@ -131,7 +131,6 @@
     "stylometry/__init__.py": "7080fae35fea0dcc0d90a4a5a178d409e15742e3d37e0d3aafcccd13a46f6d6d",
     "stylometry/corpus.py": "9845a55e74dafc6382ad003f42fff753c1b592bec847ad5a7541d21a64203695",
     "stylometry/features.py": "d4b4d70ec1010c58c9a04c23d193f499498b772d168ac779027a9b48b988c34b",
-    "stylometry/federalist.py": "2a3b4739da51c43553a30ddd73184ded1670124a642b0b03ec04d350565f0dbe",
     "stylometry/models.py": "4f5b27aafe833d56b074991d9ba468d49f9ab0e8376ce8942921a33ad4594eda"
   },
   "case_selection": "Post-hoc examples selected by category and sorted relative path. No refitting or tuning."
