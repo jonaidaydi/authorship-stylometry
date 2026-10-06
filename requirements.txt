@@ -1,8 +1,11 @@
-jupyterlab
-numpy
-pandas
-matplotlib
-scipy
-scikit-learn
-nltk
-seaborn
+numpy==2.4.4
+pandas==3.0.2
+matplotlib==3.10.9
+scipy==1.18.1
+scikit-learn==1.9.0
+nltk==3.10.3
+regex==2026.9.29
+spacy==3.8.14
+jupyterlab==4.4.3
+nbclient==0.10.2
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

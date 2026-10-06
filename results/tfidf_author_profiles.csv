@@ -1,0 +1,31 @@
+author,feature,mean_tfidf
+WilliamKazer,china,0.19144681962192905
+WilliamKazer,beij,0.07826522665008771
+WilliamKazer,state,0.07565224565488583
+WilliamKazer,offici,0.06625107117297534
+WilliamKazer,chines,0.06559072443398864
+WilliamKazer,foreign,0.06277083046397533
+WilliamKazer,trade,0.05798843247588773
+WilliamKazer,bank,0.056031708339857544
+WilliamKazer,year,0.051068882131928846
+WilliamKazer,taiwan,0.0491259107251922
+TimFarrand,million,0.15163921585345233
+TimFarrand,profit,0.11591052469612048
+TimFarrand,percent,0.10823104391895189
+TimFarrand,pound,0.09760168397706746
+TimFarrand,year,0.07618340992006126
+TimFarrand,stg,0.0724468070066932
+TimFarrand,million pound,0.06680431004097849
+TimFarrand,britain,0.06283173900391456
+TimFarrand,million stg,0.0625378613296135
+TimFarrand,compani,0.06206055353274574
+PatriciaCommins,adm,0.12308655463747305
+PatriciaCommins,quarter,0.06812303753490576
+PatriciaCommins,analyst,0.062235806691322414
+PatriciaCommins,monsanto,0.05991555212970793
+PatriciaCommins,mcdonald,0.055583795055135374
+PatriciaCommins,compani,0.05507962727066224
+PatriciaCommins,kellogg,0.054121895541361965
+PatriciaCommins,busi,0.05015638317456651
+PatriciaCommins,chemic,0.04983778602153391
+PatriciaCommins,quaker,0.04955187019607091

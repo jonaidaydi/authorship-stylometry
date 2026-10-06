@@ -1,0 +1,138 @@
+{
+  "authors": [
+    "WilliamKazer",
+    "TimFarrand",
+    "PatriciaCommins"
+  ],
+  "reference_articles": 147,
+  "mystery_articles": 3,
+  "official_test_articles": 150,
+  "duplicate_check": "No exact raw-byte or stripped-text matches from reference to either evaluation group",
+  "word_features": 1000,
+  "unigrams": 832,
+  "bigrams": 151,
+  "trigrams": 17,
+  "style_features": [
+    "mean_sentence_length",
+    "sentence_length_std",
+    "mean_word_length",
+    "type_token_ratio",
+    "stopword_ratio",
+    "function_a_per_1000",
+    "function_and_per_1000",
+    "function_as_per_1000",
+    "function_at_per_1000",
+    "function_but_per_1000",
+    "function_for_per_1000",
+    "function_from_per_1000",
+    "function_in_per_1000",
+    "function_of_per_1000",
+    "function_on_per_1000",
+    "function_or_per_1000",
+    "function_that_per_1000",
+    "function_the_per_1000",
+    "function_to_per_1000",
+    "function_with_per_1000",
+    "punctuation_comma_per_1000",
+    "punctuation_period_per_1000",
+    "punctuation_colon_per_1000",
+    "punctuation_semicolon_per_1000",
+    "punctuation_question_mark_per_1000",
+    "punctuation_exclamation_mark_per_1000"
+  ],
+  "style_variable_features": 25,
+  "style_constant_features": [
+    "punctuation_exclamation_mark_per_1000"
+  ],
+  "pca": {
+    "tfidf": {
+      "explained_variance_ratio": [
+        0.06226130562909086,
+        0.05350776893062395
+      ],
+      "features": 1000,
+      "solver": "full",
+      "fit_documents": 147
+    },
+    "style": {
+      "explained_variance_ratio": [
+        0.11223879116621434,
+        0.09711186416209786
+      ],
+      "features": 25,
+      "solver": "full",
+      "fit_documents": 147
+    }
+  },
+  "metrics": [
+    {
+      "role": "mystery",
+      "model": "tfidf_1nn",
+      "n": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    {
+      "role": "mystery",
+      "model": "style_1nn",
+      "n": 3,
+      "correct": 1,
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.2222222222222222
+    },
+    {
+      "role": "mystery",
+      "model": "style_centroid",
+      "n": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666,
+      "macro_f1": 0.5555555555555555
+    },
+    {
+      "role": "official_test",
+      "model": "tfidf_1nn",
+      "n": 150,
+      "correct": 137,
+      "accuracy": 0.9133333333333333,
+      "macro_f1": 0.9138229138229138
+    },
+    {
+      "role": "official_test",
+      "model": "style_1nn",
+      "n": 150,
+      "correct": 104,
+      "accuracy": 0.6933333333333334,
+      "macro_f1": 0.686423054070113
+    },
+    {
+      "role": "official_test",
+      "model": "style_centroid",
+      "n": 150,
+      "correct": 124,
+      "accuracy": 0.8266666666666667,
+      "macro_f1": 0.8283148695519831
+    }
+  ],
+  "python": "3.13.13",
+  "versions": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.0",
+    "spacy": "3.8.14",
+    "en_core_web_sm": "3.8.0",
+    "nltk": "3.10.3",
+    "regex": "2026.9.29",
+    "matplotlib": "3.10.9"
+  },
+  "source_sha256": {
+    "run_analysis.py": "61eb4815f8e45f7f5cb2d84da89bc382f4843062af278b0aba0265dfbcbb6a82",
+    "stylometry/__init__.py": "7080fae35fea0dcc0d90a4a5a178d409e15742e3d37e0d3aafcccd13a46f6d6d",
+    "stylometry/corpus.py": "9845a55e74dafc6382ad003f42fff753c1b592bec847ad5a7541d21a64203695",
+    "stylometry/features.py": "d4b4d70ec1010c58c9a04c23d193f499498b772d168ac779027a9b48b988c34b",
+    "stylometry/federalist.py": "2a3b4739da51c43553a30ddd73184ded1670124a642b0b03ec04d350565f0dbe",
+    "stylometry/models.py": "4f5b27aafe833d56b074991d9ba468d49f9ab0e8376ce8942921a33ad4594eda"
+  },
+  "case_selection": "Post-hoc examples selected by category and sorted relative path. No refitting or tuning."
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "category": "lexical_error_style_correct",
+    "document": "C50test/PatriciaCommins/314014newsML.txt",
+    "true_author": "PatriciaCommins",
+    "predictions": {
+      "style_1nn": "PatriciaCommins",
+      "style_centroid": "PatriciaCommins",
+      "tfidf_1nn": "TimFarrand"
+    },
+    "tfidf_neighbour": "C50train/TimFarrand/173770newsML.txt",
+    "shared_tfidf_features": [
+      {
+        "feature": "store",
+        "product": 0.1495147401516598
+      },
+      {
+        "feature": "retail",
+        "product": 0.07084100896686361
+      },
+      {
+        "feature": "profit",
+        "product": 0.0440000743931021
+      },
+      {
+        "feature": "divis",
+        "product": 0.043892402051758025
+      },
+      {
+        "feature": "million",
+        "product": 0.021821900520462956
+      },
+      {
+        "feature": "depart",
+        "product": 0.020240288276246746
+      },
+      {
+        "feature": "year",
+        "product": 0.00892865919344902
+      },
+      {
+        "feature": "margin",
+        "product": 0.0075901081035925294
+      }
+    ],
+    "centroid_distances": {
+      "WilliamKazer": 3.6604038153456186,
+      "TimFarrand": 3.729120211631946,
+      "PatriciaCommins": 3.0203483042704895
+    },
+    "centroid_comparison": {
+      "winner": "PatriciaCommins",
+      "alternative": "WilliamKazer"
+    },
+    "style_distance_contributions": [
+      {
+        "feature": "function_on_per_1000",
+        "alternative_squared_distance_minus_winner": 2.098961028593404
+      },
+      {
+        "feature": "function_with_per_1000",
+        "alternative_squared_distance_minus_winner": 1.1566823927514693
+      },
+      {
+        "feature": "punctuation_comma_per_1000",
+        "alternative_squared_distance_minus_winner": -1.136373646713086
+      },
+      {
+        "feature": "function_of_per_1000",
+        "alternative_squared_distance_minus_winner": -1.0098695705870988
+      },
+      {
+        "feature": "function_the_per_1000",
+        "alternative_squared_distance_minus_winner": 0.9972386215511295
+      },
+      {
+        "feature": "function_for_per_1000",
+        "alternative_squared_distance_minus_winner": 0.9547005068569941
+      },
+      {
+        "feature": "type_token_ratio",
+        "alternative_squared_distance_minus_winner": 0.7488923268065789
+      },
+      {
+        "feature": "mean_word_length",
+        "alternative_squared_distance_minus_winner": -0.7487130428873913
+      }
+    ]
+  },
+  {
+    "category": "lexical_correct_style_error",
+    "document": "C50test/PatriciaCommins/334989newsML.txt",
+    "true_author": "PatriciaCommins",
+    "predictions": {
+      "style_1nn": "PatriciaCommins",
+      "style_centroid": "WilliamKazer",
+      "tfidf_1nn": "PatriciaCommins"
+    },
+    "tfidf_neighbour": "C50train/PatriciaCommins/255733newsML.txt",
+    "shared_tfidf_features": [
+      {
+        "feature": "quaker",
+        "product": 0.3588025356215143
+      },
+      {
+        "feature": "snappl",
+        "product": 0.17718643734395767
+      },
+      {
+        "feature": "beverag busi",
+        "product": 0.03993751165716553
+      },
+      {
+        "feature": "beverag",
+        "product": 0.03008838375225208
+      },
+      {
+        "feature": "comment",
+        "product": 0.027416126828443382
+      },
+      {
+        "feature": "specul",
+        "product": 0.022596251796539
+      },
+      {
+        "feature": "busi",
+        "product": 0.01969926336301126
+      },
+      {
+        "feature": "analyst",
+        "product": 0.013068322468947721
+      }
+    ],
+    "centroid_distances": {
+      "WilliamKazer": 4.07913945271101,
+      "TimFarrand": 5.016257138803578,
+      "PatriciaCommins": 4.336076017934835
+    },
+    "centroid_comparison": {
+      "winner": "WilliamKazer",
+      "alternative": "PatriciaCommins"
+    },
+    "style_distance_contributions": [
+      {
+        "feature": "stopword_ratio",
+        "alternative_squared_distance_minus_winner": 2.9571227485277096
+      },
+      {
+        "feature": "mean_word_length",
+        "alternative_squared_distance_minus_winner": 2.356406196940471
+      },
+      {
+        "feature": "function_on_per_1000",
+        "alternative_squared_distance_minus_winner": 1.7566652063694672
+      },
+      {
+        "feature": "function_of_per_1000",
+        "alternative_squared_distance_minus_winner": -1.6120002314370703
+      },
+      {
+        "feature": "function_the_per_1000",
+        "alternative_squared_distance_minus_winner": -1.103301490826813
+      },
+      {
+        "feature": "mean_sentence_length",
+        "alternative_squared_distance_minus_winner": -0.8882340253881653
+      },
+      {
+        "feature": "function_in_per_1000",
+        "alternative_squared_distance_minus_winner": 0.8467247829191153
+      },
+      {
+        "feature": "type_token_ratio",
+        "alternative_squared_distance_minus_winner": -0.5936153738183105
+      }
+    ]
+  },
+  {
+    "category": "both_incorrect",
+    "document": "C50test/PatriciaCommins/404426newsML.txt",
+    "true_author": "PatriciaCommins",
+    "predictions": {
+      "style_1nn": "TimFarrand",
+      "style_centroid": "TimFarrand",
+      "tfidf_1nn": "TimFarrand"
+    },
+    "tfidf_neighbour": "C50train/TimFarrand/220852newsML.txt",
+    "shared_tfidf_features": [
+      {
+        "feature": "corn",
+        "product": 0.21393508967163338
+      },
+      {
+        "feature": "busi",
+        "product": 0.01838937097966291
+      },
+      {
+        "feature": "sweeten",
+        "product": 0.014129065778805145
+      },
+      {
+        "feature": "syrup",
+        "product": 0.008808682557301247
+      },
+      {
+        "feature": "corn syrup",
+        "product": 0.008808682557301247
+      },
+      {
+        "feature": "produc",
+        "product": 0.006841686236860612
+      },
+      {
+        "feature": "million",
+        "product": 0.006387059396923145
+      },
+      {
+        "feature": "compani",
+        "product": 0.006039648414095484
+      }
+    ],
+    "centroid_distances": {
+      "WilliamKazer": 20.110352505327775,
+      "TimFarrand": 19.838849829183708,
+      "PatriciaCommins": 20.030485169761334
+    },
+    "centroid_comparison": {
+      "winner": "TimFarrand",
+      "alternative": "PatriciaCommins"
+    },
+    "style_distance_contributions": [
+      {
+        "feature": "punctuation_semicolon_per_1000",
+        "alternative_squared_distance_minus_winner": 9.660985046533312
+      },
+      {
+        "feature": "function_and_per_1000",
+        "alternative_squared_distance_minus_winner": 2.6550312081248224
+      },
+      {
+        "feature": "function_at_per_1000",
+        "alternative_squared_distance_minus_winner": -2.5462476164798185
+      },
+      {
+        "feature": "punctuation_comma_per_1000",
+        "alternative_squared_distance_minus_winner": -1.8200842971025268
+      },
+      {
+        "feature": "function_for_per_1000",
+        "alternative_squared_distance_minus_winner": 1.80416209989487
+      },
+      {
+        "feature": "type_token_ratio",
+        "alternative_squared_distance_minus_winner": -1.4314101267966468
+      },
+      {
+        "feature": "function_from_per_1000",
+        "alternative_squared_distance_minus_winner": -1.3749309709651565
+      },
+      {
+        "feature": "sentence_length_std",
+        "alternative_squared_distance_minus_winner": -1.3248892302780173
+      }
+    ]
+  }
+]

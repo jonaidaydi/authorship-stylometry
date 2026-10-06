@@ -15,3 +15,17 @@ reuter+50+50.zip
 # Generated figures
 hca_dendrogram.png
 hka_pca_biplot.png
+
+# Runtime caches and local data
+.cache/
+.mplconfig/
+verification_outputs/
+federalist_pca.png
+federalist_hca.png
+
+# Reports are published as PDFs only
+*.tex
+*.aux
+*.log
+*.out
+*.synctex.gz
